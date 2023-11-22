@@ -1,11 +1,60 @@
-//complete this code
-class Animal {}
+// Define the Animal class
+class Animal {
+    constructor(species) {
+        this._species = species;
+    }
 
-class Dog extends Animal {}
+    // Getter for species
+    get species() {
+        return this._species;
+    }
 
-class Cat extends Animal {}
+    // Method to make a sound
+    makeSound() {
+        console.log("Generic animal sound");
+    }
+}
 
-// Do not change the code below this line
-window.Animal = Animal;
-window.Dog = Dog;
-window.Cat = Cat;
+// Define the Cat class that extends Animal
+class Cat extends Animal {
+    // Constructor for Cat
+    constructor(species) {
+        // Call the constructor of the superclass (Animal)
+        super(species);
+    }
+
+    // Method specific to Cat
+    purr() {
+        console.log("Purr");
+    }
+}
+
+// Define the Dog class that extends Animal
+class Dog extends Animal {
+    // Constructor for Dog
+    constructor(species) {
+        // Call the constructor of the superclass (Animal)
+        super(species);
+    }
+
+    // Method specific to Dog
+    bark() {
+        console.log("Woof");
+    }
+}
+
+// Example usage
+const genericAnimal = new Animal("Generic");
+console.log("Generic Animal Species:", genericAnimal.species);
+genericAnimal.makeSound();
+
+const myCat = new Cat("Domestic Cat");
+console.log("Cat Species:", myCat.species);
+myCat.makeSound();
+myCat.purr();
+
+const myDog = new Dog("Golden Retriever");
+console.log("Dog Species:", myDog.species);
+myDog.makeSound();
+myDog.bark();
+

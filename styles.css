@@ -1,1 +1,38 @@
 /*  your css code here. If applicable */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Styles</title>
+
+    <style>
+        /* Styles for the Animal class */
+        .animal {
+            font-weight: bold;
+        }
+
+        /* Styles for the Cat class */
+        .cat {
+            color: blue;
+        }
+
+        /* Styles for the Dog class */
+        .dog {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="animal cat">
+        <p>Cat</p>
+    </div>
+
+    <div class="animal dog">
+        <p>Dog</p>
+    </div>
+
+</body>
+</html>
+
